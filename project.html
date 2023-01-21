@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9anime</title>
+
+    <style>
+        body{   
+            background-color: black;
+            /* height:1000px; */
+            margin:0;
+            color:white;
+            position: relative;
+            z-index: 1;
+        }
+        header{
+            /* position:fixed; */
+            display: flex;
+            left:0;
+            right:0;
+            top:0;
+            height:80px;
+            background-color: rgb(28, 27, 27);
+            justify-content: space-between;
+        }
+        .left
+        {   display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            /* max-width:250px; */
+            background-color: rgb(200,200,200); 
+            /* margin-top: 20px; */
+        }
+        .left-1
+        {
+            width: 26px;
+            height: 26px;
+            /* background-color: white; */
+            margin: 0 0 0 35px ;
+        }
+        .left-2
+        {
+            width: 130px;
+            /* height:80px; */
+            margin: 15px 0 0 20px;
+            
+        }
+        .right
+        {
+           z-index: 0;
+           width: 180px;
+           margin-top:15px ;
+        }
+        .right-1
+        {
+            width:130px;
+            padding-top: 12px;
+            padding-bottom: 15px;
+            font-size: 15px;
+            border-radius: 40px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            background-color: blueviolet;
+            color: white;
+        }
+        main{
+            display: grid;
+            grid-template-rows: 200px 80px;
+            margin:0 10px 0 10px; 
+        }
+        .main-logo
+        {
+            /* background-color: blueviolet; */
+            /* width:300px; */
+            height: 100px;
+            /* align-items: center; */
+            margin: 0 0 0 450px;
+            opacity: 0.9;
+            margin-top: 80px;
+
+        }
+        .main-search-bar
+        {
+            display: grid;
+            grid-template-columns:923px 70px;
+            margin:10px 0px 0 150px;
+            height: 50px;
+            align-items: center;
+            
+        }
+        .main-search-bar-text
+        {
+            padding-left: 20px; 
+            border-radius: 20px 0px 0px 20px;
+            background-color: rgb(40,40,40);
+            color:white;
+            font-size: 20px;
+            border-width: 0px;
+            border-style:solid;
+            height: 60px;
+            width: 900px;
+        }
+        ::placeholder
+        {
+            color: rgb(100,100,100);
+        }
+        .main-search-bar-lens
+        {
+            border-radius: 0px 20px  20px 0;
+            background-color: blueviolet;
+            width:100px;
+            height: 62px;
+            border-width: 0;
+        }
+        .search-symbol
+        {
+            /* padding:14px ; */
+            width:40px;
+        }
+        .text-1
+        {
+            color:rgb(150,150,150);
+            font-size: 15px;
+            margin: 0 0 0 400px ;
+            font-weight: bold;
+        }
+        .text-2
+        {
+            color:rgb(150,150,150);
+            font-size: 15px;
+            /* margin: 20px 0 0 450px ; */
+            font-weight: bold;
+        }
+        .twitter
+        {
+            display: flex;
+            flex-direction: row;
+            height: 30px;
+            align-items: center;
+            justify-content: center;
+            color: rgb(58, 19, 94);
+        }
+        .twitter-logo       {
+            height: 15px;
+            
+        }
+        .GoToHome,.gotohome
+        {
+            /* margin-top: 10px; */
+            /* background-color: blueviolet; */
+            font-size: 15px;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 5px 35px 5px 35px;
+            justify-content: center;
+            border-radius: 5px;
+            border-width: 0;
+        }
+        .GoToHome
+        {
+            background-color: blueviolet;
+        }
+
+        .radio
+        {
+            display: inline;
+            font-size: 8px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        footer
+        {
+            background-color: rgb(50,50,50);
+            margin-top: 100px;
+            position:relative;
+        }
+        .abc{
+            background-color: rgb(100,100,100);
+            z-index: 0;
+        }
+        li{
+            background-color: rgb(30,30,30);
+            /* display: inline; */
+            overflow: hidden;
+            float: left;
+            margin: 5px 0 0 10px  ;
+            /* padding: 5px; */
+            font-size: 12px;
+            padding:5px 10px 5px 10px ;
+            font-weight: bold;
+            font-family: Times, serif;
+            z-index: 2;
+        }
+        
+        .anya{
+            position:absolute;
+            right:0;
+            bottom:0;
+            height: 400px;
+            z-index: 1;
+        }
+        .footer-bottom
+        {
+            display :grid;
+            grid-template-columns: 650px 200px 200px;
+            margin: 20px 0 0 35px;
+            z-index: 2;
+        }
+        .anime9Logo2
+        {
+            padding: 0px 0px 0px 0px;
+            height:60px;
+            z-index: 2;
+        }
+        .twitter-banner-bottom
+        {
+            width:50px;
+            z-index: 2;
+        }
+        .footerTextA
+        {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+        .footerTextB
+        {
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(100,100,100);
+            font-size: 12px;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body >
+
+<header>
+    <div calss="left">
+        <img  class="left-1"  src="header/burger.png">
+        <img class="left-2" src="header/9anime-logo.jpg">
+    </div>
+       
+    <div class="right">
+        <button class="right-1">Sign In</button>
+    </div>
+</header>
+
+    <main>
+            <img class="main-logo" src="header/9anime-logo.jpg">
+                <div class="main-search-bar">
+                    <input type="text" placeholder="Enter anime name" class="main-search-bar-text">
+                    <button class="main-search-bar-lens">
+                        <img  class="search-symbol" src="header/search.svg">
+                    </button>
+                    
+                </div>
+                <p class="text-1">9anime.to - Just a better place to watch anime online for free!</p>
+                <div class="twitter">
+                    <img class="twitter-logo" src="header/twitter-logo.png">
+                    <p class="text-2">Connect with us on twitter</p>
+                </div>
+                <div class="gotohome">
+                    <button class="GoToHome">Go to home</button>
+                </div>
+    </main>
+
+    <!-- <img class="anya" 
+    src="header/anya.png" > -->
+    <footer>
+        <div>
+            <div>
+                <input  type="radio" class="radio"/>EN/JP
+                <input  type="radio" class="radio"/>DARK/LIGHT
+                <input  type="radio" class="radio"/>SFW ADS
+            </div>
+            <!-- <div>
+                <img class="anime9Logo2" src="header/9anime-logo.jpg">
+            </div> -->
+            <div class="abc">
+                <ul>
+                    <li>All</li>
+                    <li>A</li>
+                    <li>B</li>
+                    <li>C</li>
+                    <li>D</li>
+                    <li>E</li>
+                    <li>F</li>
+                    <li>G</li>
+                    <li>H</li>
+                    <li>I</li>
+                    <li>J</li>
+                    <li>K</li>
+                    <li>L</li>
+                    <li>M</li>
+                    <li>N</li>
+                    <li>O</li>
+                    <li>P</li>
+                    <li>Q</li>
+                    <li>R</li>
+                    <li>S</li>
+                    <li>T</li>
+                    <li>U</li>
+                    <li>V</li>
+                    <li>W</li>
+                    <li>X</li>
+                    <li>Y</li>
+                    <li>Z</li>
+                </ul>
+            </div>
+        </div>
+        <br><br>
+        <div class="footer-bottom">
+            <div class="footer-bottom-left">
+                <img  class="anime9Logo2"src="header/9anime-logo.jpg">
+                <p>Copyright © 9anime.to. All Rights Reserved</p>
+                <img class="twitter-banner-bottom" src="header/twitter-logo.png">
+                <img>
+                <img>
+            </div>
+            <div class="footer-bottom-middle">
+                <p class="footerTextA">Help</p>
+                <p class="footerTextB">Contact</p>
+                <p class="footerTextB">FAQ</p>
+                <p class="footerTextB">Request</p>
+            </div>
+            <div >
+                <p class="footerTextA">Links</p>
+                <p class="footerTextB">A-Z List</p>
+                <p class="footerTextB">Upcomming</p>
+                <p class="footerTextB">Most Watched</p>
+
+
+            </div>
+        </div>
+    </footer>
+    
+    
+</body>
+</html>
